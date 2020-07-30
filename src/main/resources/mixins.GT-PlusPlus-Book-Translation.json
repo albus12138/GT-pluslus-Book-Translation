@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.7.10",
+  "package": "com.r4phael.mixin",
+  "refmap": "mixins.GT-PlusPlus-Book-Translation.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinCommonProxy",
+    "MixinBookHandler"
+  ]
+}

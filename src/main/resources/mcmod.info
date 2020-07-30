@@ -1,0 +1,16 @@
+[
+	{
+	  "modid": "GT-PlusPlus-Book-Translation",
+	  "name": "GT-PlusPlus-Book-Translation",
+	  "description": "Translate some hardcore manuals of GT-PlusPlus with SpongeMixin",
+	  "version": "${version}",
+	  "mcversion": "${mcversion}",
+	  "url": "",
+	  "updateUrl": "",
+	  "authors": ["r4phael"],
+	  "credits": "The Forge and FML guys, for making this example",
+	  "logoFile": "",
+	  "screenshots": [],
+	  "dependencies": []
+	}
+]
