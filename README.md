@@ -1,5 +1,5 @@
 # GT-pluslus-Book-Translation
-基于 Sponge Mxiin 框架翻译 GT++ 手册中硬编码内容
+基于 Sponge Mixin 框架翻译 GT++ 手册中硬编码内容
 
 由于语言文件加 key 出现问题，采用 config 文件作为翻译文本存储。（希望知道怎么加key的大佬可以帮助我完善本工具）
 
