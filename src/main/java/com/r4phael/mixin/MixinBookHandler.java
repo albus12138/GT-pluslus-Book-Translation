@@ -29,13 +29,14 @@ public class MixinBookHandler {
 		Property property = GT_LanguageManager.sEnglishFile.get("LanguageFile", String.format("Book.%s.Name", title), title);
 		args.set(1, property.getString());
 
-		int page_num = 0;
 		ArrayList<String> pages = new ArrayList<String>();
-		for (String page: (String[]) args.get(3)) {
+		int PAGE_NUM = GT_LanguageManager.sEnglishFile.getInt(String.format("Book.%s.APageNum", title), "LanguageFile", ((String[]) args.get(3)).length, 1, 48, "定义手册页数，增减手册页数后修改本参数");
+		String[] raw_pages = args.get(3);
+		for (int page_num=0; page_num < PAGE_NUM; page_num++) {
+			String page = page_num < raw_pages.length ? raw_pages[page_num] : "Empty Page, Please check PageNum in GregTech.lang!";
 			String no_cr_page = page.replace("\n", "[CR]");
 			property = GT_LanguageManager.sEnglishFile.get("LanguageFile", String.format("Book.%s.Page%02d", title, page_num), no_cr_page);
 			pages.add(property.getString().replace("[CR]", "\n"));
-			page_num++;
 		}
 		args.set(3, pages.toArray(new String[pages.size()]));
 	}
